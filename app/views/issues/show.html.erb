@@ -80,7 +80,7 @@ end %>
 <% if @issue.description? %>
 <div class="description">
   <div class="contextual">
-  <%= link_to l(:button_quote), quoted_issue_path(@issue), :remote => true, :method => 'post', :class => 'icon icon-comment' if authorize_for('issues', 'edit') %>
+  <%= link_to l(:button_quote), issue_id_quoted_issue_path(@issue), :remote => true, :method => 'post', :class => 'icon icon-comment' if authorize_for('issues', 'edit') %>
   </div>
 
   <p><strong><%=l(:field_description)%></strong></p>
